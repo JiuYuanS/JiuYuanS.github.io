@@ -7,5 +7,36 @@
     </head>
     <body>
         <h1>This is the first HTML page</h1>
+        <h1 id = "getTime">当前时间为：</h1>
+        <button id = "regetTime">单击此处刷新时间</button>
+        <script>
+            let time = document.querySelector("#getTime");
+            let now = new Date();
+            time.innerHTML = "当前时间为：" + now.toLocaleString();
+            //事件监听 - addEventListener()（可以多次绑定同一个事件）
+            let regetTime = document.querySelector("#regetTime");
+            regetTime.addEventListener("click", function(){
+                let now = new Date();
+                time.innerHTML = "当前时间为：" + now.toLocaleString();
+            });
+            //事件监听 - onlick（只能绑定一次事件）
+            // regetTime.onclick = function(){
+            //     let now = new Date();
+            //     time.innerHTML = "当前时间为：" + now.toLocaleString();
+            // };
+
+            //鼠标移入移出事件监听
+            //获取所有h1标签
+            let enterAndleave = document.querySelectorAll('h1');
+            //遍历所有h1标签,绑定事件,鼠标移入时背景变蓝,鼠标移出时背景变白
+            for(let i = 0; i < enterAndleave.length; i++) {
+                enterAndleave[i].addEventListener('mouseenter', function(event) {
+                    enterAndleave[i].style.backgroundColor = 'blue';
+                });
+                enterAndleave[i].addEventListener('mouseleave', function(event) {
+                    this.style.backgroundColor = 'white';
+                });
+            }
+        </script>
     </body>
 </html>
