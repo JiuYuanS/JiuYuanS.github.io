@@ -1,0 +1,7 @@
+{
+    "namelist": [
+    { "id": 1, "name": "John", "pic": "./img/background.jpg" ,"age": 25 },
+    { "id": 2, "name": "Jane", "pic": "./img/background.jpg" ,"age": 25 },
+    { "id": 3, "name": "Bob", "pic": "./img/background.jpg" ,"age": 20 }
+    ]
+}

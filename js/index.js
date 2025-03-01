@@ -1,3 +1,4 @@
+import { add } from "./math.js";
 //弹出提示框
 alert("Hello, World!");
 //let可以存储不同类型的值
